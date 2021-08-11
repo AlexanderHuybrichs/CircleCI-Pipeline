@@ -40,7 +40,7 @@ jobs:
           at: /tmp/workspace
       - run : |
           TAG=0.1.$CIRCLE_PREVIOUS_BUILD_NUM
-          git clone https://github.com/AlexanderHuybrichs/ArgoCD /tmp/CircleCI-Webapp-CD
+          git clone https://$GITHUB_PERSONAL_TOKEN@https://github.com/AlexanderHuybrichs/ArgoCD /tmp/CircleCI-Webapp-CD
           cd /tmp/CircleCI-Webapp-CD
           cp /tmp/workspace/deployment.yaml .
           sed -i 's/\(circleci-webappdemo\)\(.*\)/\1:'$TAG'/' ./deployment.yaml
