@@ -29,7 +29,7 @@ jobs:
       - run: |
           cp /tmp/workspace/webappdemo .
           TAG=0.1.$CIRCLE_BUILD_NUM
-          docker build -t alexanderh12/circleci:tagname:$TAG .
+          docker build -t alexanderh12/circleci:$TAG .
           echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
           docker push alexanderh12/circleci:$TAG
   GenerateYAML:
