@@ -50,7 +50,7 @@ jobs:
           git add .
           git commit -m "Update via CircleCI"
           # Push quietly to prevent showing the token in log
-          git push -q https://$GITHUB_PERSONAL_TOKEN@github.com/AlexanderHuybrichs/ArgoCD.git Development
+          git push -q https://$GITHUB_PERSONAL_TOKEN@github.com/AlexanderHuybrichs/ArgoCD.git main
 
 workflows:
   version: 2
